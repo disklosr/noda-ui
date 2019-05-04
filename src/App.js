@@ -1,24 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="container grid-lg" style={{ marginTop: '2rem' }}>
+      <div className="columns">
+        <div className="col-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title h5"> 🕙 Menu Noda - 2019-04-30</div>
+              <div class="divider"></div>
+            </div>
+            <div class="card-body">
+              <div>
+                <h6>🍚 Entrée</h6>
+                <dl>
+                  <dd>Saumon gravelax, salade de choux blanc</dd>
+                  <dd>Tapenade aux olives noires</dd>
+                </dl>
+              </div>
+              <div class="divider"></div>
+              <div>
+                <h6>🍖 Plats</h6>
+                <dl>
+                  <dd>Echine de porc au saté, sauce au yuzu</dd>
+                  <dd>Filet de merlu, crème persil, citron</dd>
+                </dl>
+              </div>
+              <div class="divider"></div>
+              <div>
+                <h6>🍛 Plat du chef</h6>
+                <dl><dd>Côte de bœuf, sauce au vin rouge</dd></dl>
+              </div>
+              <div class="divider"></div>
+              <div>
+                <h6>🍰 Desserts</h6>
+                <dl>
+                  <dd>Fraisier à la pistache</dd>
+                  <dd>Cheesecake oreo</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
