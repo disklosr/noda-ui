@@ -5,47 +5,80 @@ import logo from './logo.png';
 function App() {
   return (
 
-    <div className="container grid-lg" style={{ marginTop: '2rem' }}>
+    <div className="container grid-md" style={{ marginTop: '2rem' }}>
       <div className="columns">
         <div className="col-12">
-          <div class="card">
-            <div class="card-header" style={{ backgroundColor: "#f8f9fa" }}>
-              <div class="card-title h5"> 🕙 Menu Noda - 2019-04-30</div>
+
+          <div className="card shadow">
+            <div class="card-header text-center" style={{ backgroundColor: "#f8f9fa", padding: '1rem' }}>
+              <div class="card-title h6"> 🕙 Menu Noda - 2019-04-30</div>
             </div>
-            <div class="card-body">
-              <div>
-                <h6>🍚 Entrée</h6>
-                <dl>
-                  <dd>Saumon gravelax, salade de choux blanc</dd>
-                  <dd>Tapenade aux olives noires</dd>
-                </dl>
-              </div>
-              <div class="divider"></div>
-              <div>
-                <h6>🍖 Plats</h6>
-                <dl>
-                  <dd>Echine de porc au saté, sauce au yuzu</dd>
-                  <dd>Filet de merlu, crème persil, citron</dd>
-                </dl>
-              </div>
-              <div class="divider"></div>
-              <div>
-                <h6>🍛 Plat du chef</h6>
-                <dl><dd>Côte de bœuf, sauce au vin rouge</dd></dl>
-              </div>
-              <div class="divider"></div>
-              <div>
-                <h6>🍰 Desserts</h6>
-                <dl>
-                  <dd>Fraisier à la pistache</dd>
-                  <dd>Cheesecake oreo</dd>
-                </dl>
-              </div>
+          </div>
+
+          <div className="card shadow">
+            <div class="card-header" style={{ backgroundColor: "#f8f9fa", padding: '1rem' }}>
+              <div class="card-title h6"> 🍚 Entrée</div>
+            </div>
+            <div className="card-body">
+            <dl>
+              <dd>Saumon gravelax, salade de choux blanc</dd>
+              <dd>Tapenade aux olives noires</dd>
+            </dl>
+              
+            </div>
+          </div>
+
+          <div className="card shadow">
+            <div class="card-header" style={{ backgroundColor: "#f8f9fa", padding: '1rem' }}>
+              <div class="card-title h6"> 🍚 Entrée</div>
+            </div>
+            <div className="card-body">
+              Saumon gravelax, salade de choux blanc
+              <br />
+              Tapenade aux olives noires
+            </div>
+          </div>
+
+          <div className="card shadow">
+            <div class="card-header" style={{ backgroundColor: "#f8f9fa", padding: '1rem' }}>
+              <div class="card-title h6"> 🍖 Plats</div>
+            </div>
+            <div className="card-body">
+              
+                Echine de porc au saté, sauce au yuzu
+                <br />
+                Filet de merlu, crème persil, citron
+              
+            </div>
+          </div>
+
+          <div className="card shadow">
+            <div class="card-header" style={{ backgroundColor: "#f8f9fa", padding: '1rem' }}>
+              <div class="card-title h6"> 🍛 Plat du chef</div>
+            </div>
+            <div className="card-body">
+              
+                Côte de bœuf, sauce au vin rouge
+              
+            </div>
+          </div>
+
+          <div className="card shadow">
+            <div class="card-header" style={{ backgroundColor: "#f8f9fa", padding: '1rem' }}>
+              <div class="card-title h6"> 🍰 Desserts</div>
+            </div>
+            <div className="card-body">
+              
+                Fraisier à la pistache
+                <br />
+                Cheesecake oreo
+              
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+    </div >
   );
 }
 
