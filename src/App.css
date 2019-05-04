@@ -2,18 +2,22 @@ body {
     background-color: #f1f3f5
 }
 
-.vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+.navbar {
+    min-height: 32px;
+}
+
+#root {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .card {
     margin-bottom: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+}
+
+.card-header {
+    padding: 1rem !important;
+    background-color: #f8f9fa;
 }
 
 #root dl {
