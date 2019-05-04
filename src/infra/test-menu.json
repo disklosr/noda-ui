@@ -1,0 +1,44 @@
+{
+    "Menu": [
+        {
+            "entryName": "Entrées",
+            "entryItems": [
+                "Bruschetta au saumon fumée",
+                "Mousseline de betteraves au roquefort"
+            ]
+        },
+        {
+            "entryName": "Viandes & Poissons",
+            "entryItems": [
+                "Brouillade d'oeuf lardons, comté",
+                "Filet de merlu, sauce aux coques"
+            ]
+        },
+        {
+            "entryName": "Workshop",
+            "entryItems": [
+                "Pâtes au pesto rouge",
+                "Pâtes aux coques"
+            ]
+        },
+        {
+            "entryName": "Plat Du Chef",
+            "entryItems": [
+                "Quasi de veau, sauce aux morilles"
+            ]
+        },
+        {
+            "entryName": "Velouté & soupe",
+            "entryItems": [
+                "Velouté de carottes et butternuts"
+            ]
+        },
+        {
+            "entryName": "Desserts",
+            "entryItems": [
+                "Verrine passion, caramel",
+                "Ile flottante, crème anglaise à la fève de tonka"
+            ]
+        }
+    ]
+}
