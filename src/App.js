@@ -9,9 +9,8 @@ function App() {
       <div className="columns">
         <div className="col-12">
           <div class="card">
-            <div class="card-header">
+            <div class="card-header" style={{ backgroundColor: "#f8f9fa" }}>
               <div class="card-title h5"> 🕙 Menu Noda - 2019-04-30</div>
-              <div class="divider"></div>
             </div>
             <div class="card-body">
               <div>
