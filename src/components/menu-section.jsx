@@ -17,31 +17,26 @@ function Menu({ menuSection }) {
     )
 }
 
+const titleToEmojiMap = {
+    'chef': '🍛',
+    'entrée': '🥗',
+    'viande': '🥩',
+    'workshop': '🍕',
+    'dessert': '🍰',
+    'garniture': '🥦',
+    'soupe': '🥣',
+    'default': '🍲'
+}
+
 const getEmoji = titleName => {
 
     var title = titleName.toLowerCase();
-    if (title.includes('chef'))
-        return '🍛';
+    for (var key of Object.keys(titleToEmojiMap)) {
+        if (title.includes(key))
+            return titleToEmojiMap[key];
+    }
 
-    if (title.includes('entrée'))
-        return '🥗'
-
-    if (title.includes('viande'))
-        return '🥩'
-
-    if (title.includes('workshop'))
-        return '🍕'
-
-    if (title.includes('dessert'))
-        return '🍰'
-
-    if (title.includes('garniture'))
-        return '🥦'
-
-    if (title.includes('soupe'))
-        return '🥣'
-
-    else return '🍲'
+    return titleToEmojiMap['default']
 }
 
 export default Menu;

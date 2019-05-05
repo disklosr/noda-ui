@@ -14,7 +14,6 @@ class Menu extends Component {
 
     async getTodayMenu() {
         var menu = await menuRepository.getMenu();
-        console.log(menu)
         this.setState(state => ({ menuRetrieved: true, menu: menu }));
     };
 
@@ -23,16 +22,17 @@ class Menu extends Component {
     }
 
     render() {
-        console.log(this.state)
         if (this.state.menuRetrieved === false) {
             return <EmptyMenu />
         }
 
-        else if (this.state.menu.Menu == undefined) {
+        else if (this.state.menu.Menu === undefined) {
             return <EmptyMenu message={this.state.menu.message} />
         }
         else {
-            return this.state.menu.Menu.map(section => <MenuSection menuSection={section} />)
+            return this.state.menu.Menu.map((section, index) =>
+                <MenuSection menuSection={section} key={index} />
+            )
         }
     }
 }
