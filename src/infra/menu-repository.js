@@ -4,7 +4,7 @@ const fetchUrl = 'http://40.89.157.139:8080/menu/noda/today'
 
 
 const getMenu = async (category, date) => {
-    return getFakeMenu();
+    return getRealMenu();
 }
 
 const getFakeMenu = () => {
