@@ -1,19 +1,16 @@
 import React from 'react';
 import './App.css';
-import MenuSection from './components/menu';
 import Navbar from './components/navbar'
-import menuRepository from './infra/menu-repository'
+import Menu from './components/menu'
 
 function App() {
-
-  var menu = menuRepository.getMenu();
 
   return (
     <div className="container grid-md">
       <Navbar />
       <div className="columns">
         <div className="col-12">
-          {menu.Menu.map(section => <MenuSection menuSection={section} />)}
+          <Menu />
         </div>
       </div>
     </div>
