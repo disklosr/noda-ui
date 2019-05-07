@@ -18,13 +18,15 @@ function Menu({ menuSection }) {
 }
 
 const titleToEmojiMap = {
-    'chef': '🍛',
+    'chef': '👨‍🍳',
     'entrée': '🥗',
     'viande': '🥩',
     'workshop': '🍕',
     'dessert': '🍰',
     'garniture': '🥦',
     'soupe': '🥣',
+    'pates': '🍝',
+    'pâtes': '🍝',
     'default': '🍲'
 }
 
