@@ -25,12 +25,27 @@ body {
 }
 
 #root dd {
-    margin: 0
+    margin: 0;
+    line-height: 1.8;
 }
 
 #root .shadow {
     border: 0;
     box-shadow: 0 6px 8px rgba(102, 119, 136, .03), 0 1px 2px rgba(102, 119, 136, .3);
+}
+
+.card .card-body.menu-card-body {
+    padding: 0.5rem;
+}
+
+a.btn-list-item {
+    border: none;
+    color: #3b4351;
+}
+
+a.btn-list-item:visited {
+    border: none;
+    color: #3b4351;
 }
 
 @keyframes App-logo-spin {

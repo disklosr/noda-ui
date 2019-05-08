@@ -1,15 +1,24 @@
 import React from 'react'
 
-function Menu({ menuSection }) {
+function Menu({ menuSection, key }) {
     return (
-        <div className="card shadow">
+        <div className="card shadow animated fadeIn">
             <div className="card-header" >
-                <div className="card-title h6"> <span>{getEmoji(menuSection.entryName)}</span> {menuSection.entryName}</div>
+                <div className="card-title h6">
+                    <span>{getEmoji(menuSection.entryName)}</span> {menuSection.entryName}
+                </div>
             </div>
-            <div className="card-body">
+            <div className="card-body menu-card-body">
                 <dl>
                     {menuSection.entryItems.map((item, index) =>
-                        <dd key={index}>{item}</dd>
+                        <dd key={index}>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`//google.com/search?tbm=isch&q=${item}`}
+                                className="btn btn-list-item btn-block text-left">{item}
+                            </a>
+                        </dd>
                     )}
                 </dl>
             </div>
