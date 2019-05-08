@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuSection from './menu-section';
+import StatusCard from './status-card';
 
 function Menu({ baseState }) {
 
@@ -8,7 +9,7 @@ function Menu({ baseState }) {
     }
 
     else if (baseState.menu.Menu === undefined) {
-        return <EmptyMenu message={baseState.menu.message} />
+        return <StatusCard status="NotPublishedYet" message={baseState.menu.message} />
     }
     else {
         return baseState.menu.Menu.map((section, index) =>
@@ -22,13 +23,6 @@ const LoadingMenu = () =>
     <div className="card shadow">
         <div className="card-body" >
             <div className="loading loading-lg" />
-        </div>
-    </div>;
-
-const EmptyMenu = ({ message }) =>
-    <div className="card shadow">
-        <div className="card-body">
-            {message || "No menu to display"}
         </div>
     </div>;
 

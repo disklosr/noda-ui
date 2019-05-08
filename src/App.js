@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/navbar'
 import Menu from './components/menu'
 import CategorySelector from './components/category-selector'
+import Footer from './components/footer'
 import menuRepository from './infra/menu-repository'
 
 
@@ -42,6 +43,7 @@ class App extends Component {
           <div className="col-12">
             <CategorySelector onRefresh={this.onRefresh} category={this.state.category} />
             <Menu baseState={this.state} />
+            <Footer />
           </div>
         </div>
       </div>
