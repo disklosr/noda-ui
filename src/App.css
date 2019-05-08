@@ -20,6 +20,10 @@ body {
     background-color: #f8f9fa;
 }
 
+#category-selector {
+    margin-bottom: 1rem;
+}
+
 #root dl {
     margin: 0;
 }

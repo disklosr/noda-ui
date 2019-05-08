@@ -1,41 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MenuSection from './menu-section';
-import menuRepository from '../infra/menu-repository'
 
-class Menu extends Component {
-    constructor(props) {
-        super(props);
+function Menu({ baseState }) {
 
-        this.state = {
-            menuRetrieved: false,
-            menu: null
-        };
+    if (baseState.menuRetrieved === false) {
+        return <LoadingMenu />
     }
 
-    async getTodayMenu() {
-        var menu = await menuRepository.getMenu();
-        this.setState(state => ({ menuRetrieved: true, menu: menu }));
-    };
-
-    async componentDidMount() {
-        await this.getTodayMenu();
+    else if (baseState.menu.Menu === undefined) {
+        return <EmptyMenu message={baseState.menu.message} />
     }
-
-    render() {
-        if (this.state.menuRetrieved === false) {
-            return <LoadingMenu />
-        }
-
-        else if (this.state.menu.Menu === undefined) {
-            return <EmptyMenu message={this.state.menu.message} />
-        }
-        else {
-            return this.state.menu.Menu.map((section, index) =>
-                <MenuSection menuSection={section} key={index} />
-            )
-        }
+    else {
+        return baseState.menu.Menu.map((section, index) =>
+            <MenuSection menuSection={section} key={index} index={index} />
+        )
     }
 }
+
 
 const LoadingMenu = () =>
     <div className="card shadow">

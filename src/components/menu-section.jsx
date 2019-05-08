@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Menu({ menuSection, key }) {
+function Menu({ menuSection, index }) {
     return (
-        <div className="card shadow animated fadeIn">
+        <div className="card shadow animated fadeIn" style={{ animationDelay: `${index * 50}ms` }}>
             <div className="card-header" >
                 <div className="card-title h6">
                     <span>{getEmoji(menuSection.entryName)}</span> {menuSection.entryName}
