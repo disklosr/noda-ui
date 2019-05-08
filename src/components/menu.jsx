@@ -23,7 +23,7 @@ class Menu extends Component {
 
     render() {
         if (this.state.menuRetrieved === false) {
-            return <EmptyMenu />
+            return <LoadingMenu />
         }
 
         else if (this.state.menu.Menu === undefined) {
@@ -36,6 +36,13 @@ class Menu extends Component {
         }
     }
 }
+
+const LoadingMenu = () =>
+    <div className="card shadow">
+        <div className="card-body" >
+            <div className="loading loading-lg" />
+        </div>
+    </div>;
 
 const EmptyMenu = ({ message }) =>
     <div className="card shadow">
