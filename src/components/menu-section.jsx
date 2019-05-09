@@ -2,7 +2,7 @@ import React from 'react'
 
 function Menu({ menuSection, index }) {
     return (
-        <div className="card shadow animated fadeIn" style={{ animationDelay: `${index * 50}ms` }}>
+        <div className="card shadow animated fadeInUp" style={{ animationDuration: '500ms', animationDelay: `${index * 50}ms` }}>
             <div className="card-header" >
                 <div className="card-title h6">
                     <span>{getEmoji(menuSection.entryName)}</span> {menuSection.entryName}
