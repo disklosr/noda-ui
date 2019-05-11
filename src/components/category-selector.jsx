@@ -22,8 +22,9 @@ class CategorySelector extends Component {
         return (
             <div id="category-selector" className="btn-group btn-group-block">
                 <button value="noda" onClick={this.handleSubmit} className={'btn ' + (this.props.category === 'noda' ? 'btn-primary' : '')}>Noda</button>
-                <button value="32blanche" onClick={this.handleSubmit} className={'btn ' + (this.props.category === '32blanche' ? 'btn-primary' : '')}>32 Blanche</button>
-                <button value="vsh" onClick={this.handleSubmit} className={'btn ' + (this.props.category === 'vsh' ? 'btn-primary' : '')}>La Ruche &amp; L'Abeille</button>
+                <button value="32blanche" onClick={this.handleSubmit} className={'btn hide-sm ' + (this.props.category === '32blanche' ? 'btn-primary' : '')}>32 Blanche</button>
+                <button value="le7" onClick={this.handleSubmit} className={'btn hide-sm ' + (this.props.category === 'le7' ? 'btn-primary' : '')}>Le 7</button>
+                <button value="vsh" onClick={this.handleSubmit} className={'btn hide-sm ' + (this.props.category === 'vsh' ? 'btn-primary' : '')}>La Ruche &amp; L'Abeille</button>
             </div>
         );
     }

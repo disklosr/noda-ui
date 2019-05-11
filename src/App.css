@@ -15,9 +15,13 @@ body {
     margin-bottom: 1rem;
 }
 
-.card-header {
-    padding: 1rem !important;
+.toast {
+    margin-bottom: 1rem;
+}
+
+.card .card-header {
     background-color: #f8f9fa;
+    padding: 0.8rem;
 }
 
 #category-selector {
@@ -46,10 +50,18 @@ body {
     color: #66778880;
 }
 
+.text-small {
+    font-size: 0.7rem;
+}
+
 .footer a,
 .footer a:visited,
 .footer a:focus {
     color: #66778880;
+}
+
+.footer {
+    margin-bottom: 1rem;
 }
 
 

@@ -6,12 +6,16 @@ import React from 'react'
 
 var notPublishedYet = [illustration1, illustration3, illustration5]
 
+const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+const selectedIllustration = getRandomElement(notPublishedYet);
+
 function StatusCard({ status, message }) {
     var illustration = null;
 
     switch (status) {
         case 'NotPublishedYet':
-            illustration = getRandomElement(notPublishedYet);
+            illustration = selectedIllustration
             break;
     }
 
@@ -27,6 +31,5 @@ function StatusCard({ status, message }) {
     )
 }
 
-const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 export default StatusCard;

@@ -8,8 +8,24 @@ const getMenu = async (category, date) => {
 }
 
 const getFakeMenu = () => {
-    menu.Menu[0].entryName = Math.random().toString()
+    menu.random = Math.random().toString()
     return menu;
+}
+
+const submitForm = async (formData) => {
+    var result = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formData })
+    });
+
+    return result.ok
+}
+
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
 }
 
 const getRealMenu = async (category) => {
@@ -43,4 +59,4 @@ const getRealMenu = async (category) => {
     }
 }
 
-export default { getMenu }
+export default { getMenu, submitForm }
