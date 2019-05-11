@@ -27,6 +27,14 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+  <!-- Contact form needed for netlify parsers -->
+  <form name="contact" netlify netlify-honeypot="lastName" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="subject" />
+    <textarea name="message"></textarea>
+  </form>
+
   <div id="root"></div>
   <!--
       This HTML file is a template.
