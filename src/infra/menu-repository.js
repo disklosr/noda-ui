@@ -33,13 +33,11 @@ const getRealMenu = async (category) => {
         var response = await fetch(fetchUrl + `/${category}/today`);
         if (response.ok) {
             var menu = await response.json()
-            console.log(menu)
 
             if (menu.message != null && menu.message != undefined)
                 return menu;
 
             var flattenedItems = new Set(menu.Menu.reduce((acc, item) => acc.concat(item.entryItems), []))
-            console.log(flattenedItems)
 
             if (flattenedItems.size === 0)
                 return { message: 'The retrieved menu doesn\'t seem right!' }
