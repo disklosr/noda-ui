@@ -18,6 +18,10 @@ const getRealMenu = async (category) => {
         if (response.ok) {
             var menu = await response.json()
             console.log(menu)
+
+            if (menu.message != null && menu.message != undefined)
+                return menu;
+
             var flattenedItems = new Set(menu.Menu.reduce((acc, item) => acc.concat(item.entryItems), []))
             console.log(flattenedItems)
 
@@ -34,7 +38,8 @@ const getRealMenu = async (category) => {
     }
 
     catch (e) {
-        return { message: e + 'An error occured while fetching the menu' }
+        console.log(e);
+        return { message: 'An error occured while fetching the menu' }
     }
 }
 
