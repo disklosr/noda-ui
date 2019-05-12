@@ -1,6 +1,6 @@
 import menu from './test-menu.json'
 
-const fetchUrl = 'https://noda.francecentral.cloudapp.azure.com:8081/menu'
+const fetchUrl = 'https://noda.francecentral.cloudapp.azure.com/menu'
 
 
 const getMenu = async (category, date) => {
