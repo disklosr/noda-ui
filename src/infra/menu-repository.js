@@ -1,6 +1,6 @@
 import menu from './test-menu.json'
 
-const fetchUrl = 'https://noda.nuc.disklosr.com/menu'
+const fetchUrl = 'https://noda.mallow.disklosr.com/menu'
 
 
 const getMenu = async (category, date) => {
